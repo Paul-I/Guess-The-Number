@@ -50,26 +50,31 @@ while(playing):
     if (guess > 100 or guess < 1):
         invalid = True
         while(invalid):
+#Just like I said earlier this is just to clean the screen so it will look nice.
             system ("cls")
+#Once again just to be clear "print" is what you want the computer to print or display.
             print "You put an INVALID NUMBER!!!! Please guess a number between 1 and 100"
+#"int" stands for integers, "raw input" is what makes it possible for you to input a number without input I think most python games won't work.
             guess = int(raw_input("What is your guess? "))
             guesses += 1
+#This what makes it so the guess is only between 100 and hundred not high or less this is also how the computer finds how many times you guessed.
             if (100 >= guess >= 1):
                 invalid = False
-#This takes off guesses
                 guesses -= 1
-#This add to the amount of guesses I have guessed and this is how I find out how many guesses you've guessed.
+
     guesses += 1
     if (guess == num):
-#This is how I get the scores by dividing the number of guesses by 1000, this is why I need the code from future import division.
+#The next two line has to do score and congrat, I added the "str" to the print so I can show them how many times they guess and what their score is.
         score += (1000/guesses)
-        print "Congratulations!!!!!!! The number you guess was right and it took you only " + str(guesses) + "guesses. Current score = " + str(int(score))
+        print "Congratulations!!!!!!! The number you guess was right and it took you only " + str(guesses) + " guesses. Current score = " + str(int(score))
         sleep(2)
+#This is just the beginning of a new Game since we def new game ealier.
         playing = playAgain()
+#Thhis section is what tells if your number is too high or too low.
     elif (guess > num):
         print "Your guess was too high!!! sorry please try again"
         sleep(2)
-    else:
+else:
         print "Your guess was too low!!! sorry please try again"
 
         sleep(2)
