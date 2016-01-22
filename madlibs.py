@@ -1,0 +1,4 @@
+story = '''
+{}. When {}
+
+def main

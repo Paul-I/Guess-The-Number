@@ -51,7 +51,6 @@ while(playing):
         invalid = True
         while(invalid):
 #Just like I said earlier this is just to clean the screen so it will look nice.
-            system ("cls")
 #Once again just to be clear "print" is what you want the computer to print or display.
             print "You put an INVALID NUMBER!!!! Please guess a number between 1 and 100"
 #"int" stands for integers, "raw input" is what makes it possible for you to input a number without input I think most python games won't work.
@@ -73,8 +72,7 @@ while(playing):
 #Thhis section is what tells if your number is too high or too low.
     elif (guess > num):
         print "Your guess was too high!!! sorry please try again"
-        sleep(2)
-else:
+        sleep(1)
+    else:
         print "Your guess was too low!!! sorry please try again"
-
-        sleep(2)
+        sleep(1)
